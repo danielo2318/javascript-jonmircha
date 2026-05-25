@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB APIs</title>
+    <style>
+    :root{
+        --yellow-color: #F7DF1E;
+        --dark-color: #222;
+    }
+
+    .cards{
+        border: thin solid var(--dark-color);
+        padding: 1rem;
+    }
+
+    .card{
+        display: inline-block;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+    }
+
+    .card figcaption{
+        padding: 1rem;
+    }
+
+    .rotate-45{
+        transform:rotate(45deg);
+    }
+
+    .rotate-135{
+        transform: rotate(135deg);
+    }
+
+    .opacity-80{
+        opacity: .8;
+    }
+
+    .sepia{
+        filter:sepia(1);
+    }
+
+    .eventos-flujo div{
+        padding: 4rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .uno{
+        background-color: yellow;
+    }
+
+    .dos{
+        background-color: gold;
+    }
+
+    .tres{
+        background-color: lightyellow;
+    }
+    </style>
+</head>
+<body>
+<!-- Curso 60 WEB APIs -->
+
+    <!-- API Application program Interface 
+     es aquella serie de objetos o mecanismos que tiene el lenguaje implementado en ciertas areas
+     para poder interactuar con lo que tiene que ver con el navegador -->
+    <h1>WEB APIs</h1>
+    <h2>DOM: Document Object Model</h2>
+    <h2>BOM: Browser Object Model</h2>
+    <h2>CSSOM: CSS Object Model</h2>
+    <h2>WEB APIs</h2>
+    <ul>
+        <li>Eventos</li>
+        <li>Forms</li>
+        <li>AJAX - Fetch</li>
+        <li>History</li>
+        <li>Web Storege</li>
+        <li>Geolocation</li>
+        <li>Drag $ Drop</li>
+        <li>Indexed DB</li>
+        <li>Canvas</li>
+        <li>MatchMedia</li>
+        <li>etc...</li>
+    </ul>
+<br>
+<hr>
+<br>
+<h3>Manejo del DOM </h3>
+<p id="que-es">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nostrum beatae tenetur blanditiis! Dolor ex ab, quia iusto iste illo cum assumenda ipsa, ut dignissimos et, tempora laborum maxime repudiandae.</p>
+<nav id="menu">
+    <ul>
+        <li><a href="#">Sección 1</a></li>
+        <li><a href="#">Sección 2</a></li>
+        <li><a href="#">Sección 3</a></li>
+        <li><a href="#">Sección 4</a></li>
+        <li><a href="#">Sección 5</a></li>
+    </ul>
+</nav>
+
+<input type="text" name="nombre" placeholder="Nombre">
+<a class="link-dom" href="dom.html" style="background-color: #F7DF1E; color: #222" data-id="1" data-description="Document Object Model">DOM</a>
+<!-- lo unico que nos pide el standard html es escribir al principio la palabra data- -->
+<section class="cards">
+    <figure class="card">
+        <img src="https://placebear.com/200/200" alt="tech">
+        <figcaption>Tech</figcaption>
+    </figure>
+        <figure class="card">
+        <img src="https://baconmockup.com/200/200" alt="animals">
+        <figcaption>Animals</figcaption>
+    </figure>
+        <figure class="card">
+        <img src="https://picsum.photos/200/200" alt="people">
+        <figcaption>Arch<figcaption>
+    </figure>
+        <figure class="card">
+        <img src="https://placebear.com/200/200" alt="arch">
+        <figcaption>People</figcaption>
+    </figure>
+        <figure class="card">
+        <img src="https://picsum.photos/200/200" alt="nature">
+        <figcaption>Nature</figcaption>
+    </figure>
+</section>
+
+<template id="template-card">
+    <figure class="card">
+        <img>
+        <figcaption></figcaption>
+    </figure>
+</template>
+
+<h3>Eventos en JS</h3>
+<h4>Manejadores de Eventos</h4>
+<button onclick="holaMundo()">Evento con atributo HTML</button><!-- Este es mala practica -->
+<br><br>
+<button id="evento-semantico">Evento con manejador semántico</button>
+<br><br>
+<button id="evento-multiple">Evento con manejador multiple</button>
+<br><br>
+<button id="evento-remover">Removiendo eventos con manejadores multiples</button>
+<br><br>
+<h4>Flujo de Eventos</h4>
+<section class="eventos-flujo">
+    <div class="uno">
+        1
+        <div class="dos">
+            2
+            <div class="tres">
+                3
+                <a href="https://jonmircha.com/" target="blank" rel = "noopener">jonmircha.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+<h3 style="width: 2000px">Manejo del BOM (Browser Object Model)</h3>
+<button id="abrir-ventana">Abrir Ventana</button>
+<br><br>
+<button id="cerrar-ventana">Cerrar Ventana</button>
+<br><br>
+<button id="imprimir-ventana">Imprimir Ventana</button>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/dom.js"></script>
+</body>
+</html>

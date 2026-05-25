@@ -1,0 +1,87 @@
+{
+  "santos": [
+    {
+      "id": "1",
+      "nombre": "Seiya",
+      "constelacion": "Pegaso"
+    },
+    {
+      "id": "2",
+      "nombre": "Shiryu",
+      "constelacion": "Dragón"
+    },
+    {
+      "id": "3",
+      "nombre": "Hyoga",
+      "constelacion": "Cisne"
+    },
+    {
+      "id": "4",
+      "nombre": "Shun",
+      "constelacion": "Andromeda"
+    },
+    {
+      "id": "5",
+      "nombre": "Ikki",
+      "constelacion": "Fénix"
+    },
+    {
+      "nombre": "Mu",
+      "constelacion": "Aries",
+      "id": "EDWT5Xf0pWw"
+    },
+    {
+      "nombre": "Aldebaran",
+      "constelacion": "Tauro",
+      "id": "WET7nTHHuks"
+    },
+    {
+      "nombre": "Saga",
+      "constelacion": "Geminis",
+      "id": "oT9E8Vb5C9U"
+    },
+    {
+      "nombre": "Mascara de Muerte",
+      "constelacion": "Cancer",
+      "id": "a2nhN1aYCFI"
+    },
+    {
+      "nombre": "Aioria",
+      "constelacion": "Leo",
+      "id": "7wTuLbzCX78"
+    },
+    {
+      "nombre": "Shaka",
+      "constelacion": "Virgo",
+      "id": "t0Hq919FReI"
+    },
+    {
+      "nombre": "Dohko",
+      "constelacion": "Libra",
+      "id": "muz7_SSDpqs"
+    }
+  ],
+  "dioses": [
+    {
+      "id": "1",
+      "nombre": "Athena",
+      "de": "Tierra"
+    },
+    {
+      "id": "2",
+      "nombre": "Poseidón",
+      "de": "Mar"
+    },
+    {
+      "id": "3",
+      "nombre": "Hades",
+      "de": "Inframundo"
+    },
+    {
+      "id": "4",
+      "nombre": "Zeus",
+      "de": "Cielo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

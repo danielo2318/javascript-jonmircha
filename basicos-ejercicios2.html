@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de programacion en JS</title>
+</head>
+
+<body>
+  <h1>Ejercicios de programacion en JS</h1>
+</body>
+<script>
+  /*1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.*/
+
+  let cadena = "Hola Mundo",
+    pescado = "Salmon";
+
+  function contarCadena(texto) {
+    console.log(texto);
+    if (!texto) {
+      console.warn(`Añade un texto`)
+    }
+
+    if (typeof texto !== "string") {
+      console.error(`El input ingresado debe ser un string/texto`)
+    }
+
+    else {
+      console.log(texto.length);
+    }
+  }
+
+  //contarCadena(cadena);
+  //contarCadena("");
+  //contarCadena(123);
+  //contarCadena(pescado);
+
+  /* function contarCaracteres(cadena = ""){
+if(!cadena){
+ console.warn("No ingresaste ninguna cadena")
+}else {
+console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+}
+} */
+
+  /* const contarCaracteres = (cadena ="")=>{
+  if(!cadena){
+    console.warn("No ingresaste ninguna cadena")
+  }else{
+    console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+  }
+  } */
+
+  //Operador Ternario (condicion)? verdadero : falso
+
+  const contarCaracteres = (cadena = "") =>
+    !cadena
+      ? console.warn("No ingresaste ninguna cadena")
+      : console.info(
+        `La cadena "${cadena}" tiene ${cadena.length} caracteres`
+      ); // Este tipo de arrow function ya tiene el return implicito
+
+  //contarCaracteres();
+  //contarCaracteres("Hola Mundo");
+
+
+
+
+
+
+  /*2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".*/
+  const recortarTexto = (cadena = "", longitud = undefined) =>
+    !cadena
+      ? console.warn("No ingresaste el texto")
+      : longitud === undefined
+        ? console.warn("No ingresaste la longitud para recortar el texto")
+        : console.info(
+          `Texto inicial: "${cadena}", texto final:${cadena.slice(0, longitud)}`
+        );
+
+    const recortarTexto2 = (cadena = "", longitud = undefined) =>
+  !cadena
+    ? console.warn("No ingresaste el texto")
+    : longitud === undefined
+      ? console.warn("No ingresaste la longitud para recortar el texto")
+      : typeof cadena !== "string"
+        ? console.error("El valor ingresado debe ser un texto") // <- Condición ? Acción
+        : typeof longitud !== "number"
+          ? console.error("El valor ingresado debe ser un número") // <- Condición ? Acción
+          : console.info(`Texto inicial: "${cadena}", texto final: ${cadena.slice(0, longitud)}`);
+
+  recortarTexto("hola mundo", 6);
+  recortarTexto("hola mundo", 6);
+  recortarTexto("hola mundo", 2);
+  recortarTexto("", 2);
+  recortarTexto("hola Mundo",);
+  recortarTexto("",);
+  recortarTexto2(5, 4);
+  recortarTexto2("5", "4");
+
+</script>
+
+</html>

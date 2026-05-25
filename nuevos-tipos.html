@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Datos en JavaScript</title>
+</head>
+<body>
+    <h1>This en JavaScript</h1>
+
+<script>
+/* 
+symbol es un tipo de dato primitivo, una vez que nosotros creamos un simbolo
+su valor se va a mantener privado y para uso interno, generalmente se agregan como caracteristicas de objetos como si fueran 
+una propiedad.
+Lo symbols nos permiten crear identificadores únicos, identificadores de referencia
+ */
+
+ //para crear un symbol llamamos la función constructora del objeto symbol, sin la palabra new
+/* let id = Symbol("id");
+let id2 = Symbol("id2");
+
+console.log(id === id2);
+console.log(id,id2);
+console.log(typeof id,typeof id2);
+
+const NOMBRE = Symbol("nombre");
+const SALUDAR = Symbol("saludar");
+
+const persona = {
+[NOMBRE]: "Jon",
+edad: 35
+}
+
+console.log(persona);
+
+persona.NOMBRE = "Jonathan Mircha";
+
+console.log(persona);
+console.log(persona.NOMBRE);
+console.log(persona[NOMBRE]);
+
+persona[SALUDAR] = function() {
+    console.log(`Hola`);
+}
+
+console.log(persona);
+persona[SALUDAR]();
+
+for(let propiedad in persona) {
+    console.log(propiedad);
+    console.log(persona[propiedad]);
+} 
+
+console.log(Object.getOwnPropertySymbols(persona));
+ */
+
+
+
+ // Curso JavaScript 50.- Sets
+
+/* Es muy similar a un array pero de datos únicos */
+
+/* const set = new Set([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOLA"]);
+console.log(set);
+console.log(set.size);
+
+const set2 = new Set();
+set2.add(1);
+set2.add(2);
+set2.add(2);
+set2.add(3);
+set2.add(true);
+set2.add(false);
+set2.add(true);
+set2.add({});
+
+console.log(set2);
+console.log(set2.size);
+
+console.log("Recorriendo set");
+for(item of set) {
+    console.log(item);
+}
+
+console.log("Recorriendo set2");
+set2.forEach(item => console.log((item)));
+
+let arr = Array.from(set);
+console.log(arr);
+console.log(arr[0]);
+console.log(arr[9]);
+
+set.delete("HOLA");
+console.log(set);
+
+console.log(set.has("hola"));
+console.log(set.has(19));
+
+set2.clear();
+console.log(set2); */
+
+
+//CURSO JavaScript 51 Maps
+/* 
+Los Maps son objetos que nos sirver para almacenar conjuntos de valores asociados a manera
+de objeto como si fueran un objeto primitivo, tienen caracteristivcas no muy usables
+*/
+
+/* const mapa = new Map();
+mapa.set("nombre", "Jon");
+mapa.set("apellido", "Mircha");
+mapa.set("edad", 35);
+
+console.log(mapa);
+console.log(mapa.size);
+console.log(mapa.has("correo"));
+console.log(mapa.has("nombre"));
+mapa.set("nombre", "Jonathan Mircha");
+console.log(mapa.get("nombre"));
+mapa.delete("apellido");
+
+mapa.set(19, "diecinueve")
+console.log(mapa);
+
+for (let [key, value] of mapa) {
+    console.log(`Llave: ${key}, Valor: ${value}`);
+}
+
+const mapa2 = new Map([
+    ["nombre", "Kenai"],
+    ["edad", 7],
+    ["animal", "perro"],
+    [null, "nulo"]
+])
+
+console.log(mapa2)
+
+const llavesMapa2 = [...mapa2.keys()];
+const valoresMapa2 = [...mapa2.values()];
+
+console.log(llavesMapa2);
+console.log(valoresMapa2); */
+
+
+//Curso JavaScript 52 WeakSet & WeakMaps
+
+/* solo pueden almacenar referencias debiles, las llaves deben ser de tipo objeto
+no podemos iterar a traves de ellos, no se pueden borrar todos los elementos de un jalon
+, no se puede verificar su tamaño
+*/
+
+//const ws = new WeakSet([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOla"]);
+//Esto no se hace no se pueden añadir de madrazo, se tienen que añadir de 1 por uno en los
+//WeakSet
+
+/* const ws = new WeakSet();
+
+let valor1 = {"valor1": 1};
+let valor2 = {"valor2": 2};
+let valor3 = {"valor3": 3};
+
+ws.add(valor1);
+ws.add(valor2);
+
+console.log(ws);
+
+console.log(ws.has(valor1));
+console.log(ws.has(valor3));
+
+ws.delete(valor2);
+console.log(ws);
+
+ws.add(valor2);
+ws.add(valor3);
+console.log(ws);
+
+setInterval(() => console.log(ws), 1000);
+
+setTimeout(() => {
+    valor1 = null;
+    valor2 = null;
+    valor3 = null; 
+}, 5000);
+ */
+
+/* const wm = new WeakMap([
+    ["nombre", "kEnAi"],
+    ["edad", 7],
+    ["animal", "perro"],
+    [null, "nulo"]
+]); */
+
+/* const wm = new WeakMap();
+let llave1 = {};
+let llave2 = {};
+let llave3 = {};
+
+wm.set(llave1,1);
+wm.set(llave2,2);
+console.log(wm);
+
+console.log(wm.has(llave1));
+console.log(wm.has(llave3));
+
+console.log(wm.get(llave1));
+console.log(wm.get(llave2));
+console.log(wm.get(llave3));
+
+wm.delete(llave2);
+console.log(wm);
+
+wm.set(llave2,2);
+wm.set(llave3,3);
+console.log(wm);
+
+setInterval(() => console.log(wm), 1000);
+
+setTimeout(() => {
+    llave1 = null;
+    llave2 = null;
+    llave3 = null; 
+}, 5000);
+ */
+
+
+ //CURSO JavaScript 53. Iterables & Iterators
+
+/* 
+Una Iteración es una vuelta en el recorrido de un ciclo ej(Do While, For of, For Each etc)
+cuando hablamos de que una variable o un tipo de dato es iterable, significa que es una estructura
+de datos lineal y que hace que sus elementos sean publicos y se puedan recorrer
+*/
+
+/* 
+Se conoce como iterador a la interfaz que es una clase de apuntador que va recorriendo los elementos de la misma estuctura
+*/
+
+/* const iterable = [1,2,3,4,5,6];
+//const iterable = new Set([1,2,3,3,4,5,6,6]);
+//const iterable = "Hola Mundo";
+//const iterable = new Map([["nombre", "jon"],["edad",35]]);
+
+//Accedemos al iterador del iterable
+const iterador = iterable[Symbol.iterator]();
+
+console.log(iterable);
+console.log(iterador);
+//console.log(iterador.next());
+//console.log(iterador.next());
+//console.log(iterador.next());
+//console.log(iterador.next());
+//console.log(iterador.next());
+//console.log(iterador.next());
+
+let next = iterador.next();
+
+while(!next.done){
+    console.log(next.value);
+    next = iterador.next();
+} */
+
+//Curso JavaScript 54 Generators
+/*
+Para que JavaScript sepa que va a ser una función de tipogenerador se le añade un *
+-los generadores nos ayudan a volver el codigo de las funciones iterables
+yield es como un return que indica a la funcion que cuando me hayan mandado llamar 
+con el metodo next del iterador aqui mando el primer valor 
+*/
+/* function* iterable() {
+ yield "hola";
+ console.log("Hola consola");
+ yield "hola 2";
+ console.log("Seguimos con mas instrucciones de nuestro código");
+ yield "hola 3";
+ yield "hola 4";
+}
+
+let iterador = iterable();
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+
+for (let y of iterador) {
+    console.log(y);
+}
+
+const arr = [...iterable()];
+console.log(arr);
+
+function cuadrado(valor){
+setTimeout(() => {
+ return console.log({valor, resultado: valor * valor})
+}, Math.random()*1000);
+
+
+}
+
+function*generator(){
+    console.log("Inicia generator");
+    yield cuadrado(0);
+    yield cuadrado(1);
+    yield cuadrado(2);
+    yield cuadrado(3);
+    yield cuadrado(4);
+    yield cuadrado(5);
+    console.log("Termina generator");
+}
+
+let gen = generator();
+
+for(let y of gen){
+    console.log(y);
+}
+ */
+
+
+ //Curso JavaScript 55 Proxies
+ /* Es un nuevo mecanismo en JavaScript que te permite crear un objeto basado en un objeto literal inicial
+ el proxie va a recibir al objeto literal, generara una copia y va a permitir que realices ciertas 
+ operaciones dentro de esta copia*/
+
+/* const persona = {
+    nombre: "",
+    apellido: "",
+    edad: 0
+}
+
+const manejador = {
+    set(obj, prop, valor){
+    if(Object.keys(obj).indexOf(prop)===-1){
+      return console.error(`La propiedad "${prop}" no existe en el objeto persona`)
+    }
+    
+    if(
+      (prop === "nombre" || prop === "apellido") &&
+      !(/^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/g.test(valor))
+    ){
+      return console.error(`La propiedad "${prop}" solos acepta letras y espacios en blanco`);
+    }
+
+     obj[prop] = valor;
+    }
+}
+
+const jon = new Proxy(persona, manejador);
+jon.nombre = "Jon";
+jon.apellido = "Mir-cha";
+jon.edad = 35;
+jon.twitter = "@jonmircha";
+console.log(jon);
+
+console.log(persona);
+ */
+
+
+ //Curso JavaScript 56 Propiedades dinámicas de los objetos
+
+/* let aleatorio = Math.round(Math.random()*100+5);
+const objUsuarios = {
+    propiedad: "Valor",
+    [`id_${aleatorio}`]: "Valor aleatorio"
+};
+
+const usuarios = ["Jon", "Irma", "Kala", "kEnAi"];
+usuarios.forEach((usuario, index)=>objUsuarios[`id_${index}`] = usuario);
+
+console.log(objUsuarios);
+ */
+
+
+ //Curso JavaScript 57 - this
+
+/* console.log(this);
+console.log(window);
+console.log(this === window);
+
+this.nombre = "Contexto Global";
+console.log(this.nombre);
+
+function imprimir() {
+    console.log(this.nombre);
+
+}
+
+imprimir();
+
+
+const obj = {
+    nombre: "Contexto Objeto",
+    imprimir: function (){
+        console.log(this.nombre);
+    }
+}
+
+obj.imprimir();
+
+
+const obj2 = {
+    nombre: "Contexto Objeto 2",
+    imprimir
+}
+
+obj2.imprimir();
+
+const obj3 = {
+    nombre: "Contexto Objeto 3",
+    imprimir: () => {
+        console.log(this.nombre);
+    }
+}
+
+obj3.imprimir(); //Las arrowfunctions no manejan su propio contexto 
+
+function Persona (nombre){
+    const that = this;
+    //this.nombre=nombre;
+    that.nombre = nombre;
+   // return console.log(this.nombre);
+   // return function(){
+   // console.log(this.nombre);
+   //} 
+
+   //return () => console.log(this.nombre);
+   return function(){
+    console.log(that.nombre);
+   }
+}
+
+let jon = new Persona ("Jon");
+jon(); */
+
+
+//Curso JavaScript 58 call, apply, bind
+
+/* console.log(this);
+this.lugar = "Contexto Global";
+
+function saludar(saludo, aQuien){
+    console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+}
+
+saludar("Hola", "kEnAi");
+
+const obj = {
+    lugar: "Contexto Objeto"
+}
+
+//La diferencia de como funciona call y apply es como recibe esos parametros despues del contexto con el que quiero trabajar
+// con call mandamos a llamar los parametros separados con comas ,,,,
+// apply utiliza un arreglo y en ese arreglo vamos a pasar los parametros que estemos utilizando
+saludar.call(obj, "Hola", "Jon");
+saludar.call(null, "Hola", "Jon");
+saludar.call(this, "Hola", "Jon");
+saludar.apply(obj, ["Adios", "MirCha"]);
+saludar.apply(null, ["Adios", "MirCha"]);
+saludar.apply(this, ["Adios", "MirCha"]);
+
+this.nombre = "Window";
+
+const persona = {
+    nombre: "Jon",
+    saludar: function (){
+        console.log(`Hola ${this.nombre}`)
+    }
+}
+
+persona.saludar();
+
+const otraPersona = {
+    saludar: persona.saludar.bind(this)
+}
+
+otraPersona.saludar(); */
+
+//Curso JavaScript 59 JSON
+
+// Es una tecnologia muy important Java Script Object Notation -JSON
+//formato ligero de intercambio de datos, muchas veces actua como un traductor entre lenguajes de programacion
+//JSON ha ido desplazando a xml, JSON no es exclusivo de JavaScript, cualquier lenguaje debe tener soporte para JSON
+// se ha vuelto el estandard en el intercambio de información
+
+const json = {
+    cadena: "Jon",
+    numero: 35,
+    booleano: true,
+    arreglo: ["correr",
+    "programar",
+    "cocinar"],
+    objeto:{
+        twitter: "@jonmircha",
+        email: "jonmirchagmail.com"
+    },
+    nulo: null
+}
+
+console.log(json);
+
+/* todo archivo json tiene que empezar con apertura de llaves y cierres 
+    todas las propiedades deben ir con dobles comillas, JSON es una interfaz de lenguaje y tiene 2 metodos parse() 
+    y stringify()*/
+/* JSON.parse() analiza una cadena de texto como JSON, transfromandolo a un valor válido en JS*/
+console.log(JSON);
+console.log(JSON.parse("{}"));
+console.log(JSON.parse("[1,2,3]"));
+console.log(JSON.parse("true"));
+console.log(JSON.parse("false"));
+console.log(JSON.parse("19"));
+//console.log(JSON.parse("`Hola Mundo`"));
+console.log(JSON.parse("null"));
+//console.log(JSON.parse("undefined"));
+
+/* stringify() convierte un objeto o valor de JavaScript en una cadena de texto JSON*/
+console.log(JSON.stringify({}));
+console.log(JSON.stringify([1,2,3]));
+console.log(JSON.stringify(true));
+console.log(JSON.stringify(false));
+console.log(JSON.stringify(null));
+console.log(JSON.stringify(undefined));
+console.log(JSON.stringify({x: 2, y: 3}));
+
+console.log(JSON.stringify(json));
+console.log(JSON.parse(`{
+    "cadena": "Jon",
+    "numero": 35,
+    "booleano": true,
+    "arreglo": ["correr", "programar", "cocinar"],
+    "objeto": {
+        "twitter": "@jonmircha",
+        "email": "jonmircha@gmail.com"
+    },
+    "nulo": null
+}`));
+
+
+
+
+
+</script>
+</body>
+</html>

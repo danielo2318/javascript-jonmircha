@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1  id="countdown"></h1>
+    <button id="startButton">Iniciar</button>
+</body>
+<script>
+const countdownDisplay = document.getElementById('countdown');
+const startButton = document.getElementById('startButton');
+
+let timeLeft = 10;
+
+startButton.addEventListener('click', () => {
+   
+countdownDisplay.textContent = timeLeft;
+
+const timer = setInterval(() => {
+ timeLeft--;
+
+ if(timeLeft >= 0){
+    countdownDisplay.textContent = timeLeft;
+ }
+}, 1000);
+  
+setTimeout(() =>{
+    clearInterval(timer);
+    countdownDisplay.textContent = "Time's up!";
+    console.log("Time's up!");
+}, (timeLeft) * 1000);
+
+});
+</script>
+</html>
